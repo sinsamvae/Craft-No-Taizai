@@ -67,9 +67,9 @@ public class CraftNoTaizaiModVariables {
 			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			clone.level = original.level;
+			clone.levelxp = original.levelxp;
 			clone.maxlevelxp = original.maxlevelxp;
 			if (!event.isWasDeath()) {
-				clone.levelxp = original.levelxp;
 			}
 		}
 	}
@@ -107,7 +107,7 @@ public class CraftNoTaizaiModVariables {
 	public static class PlayerVariables {
 		public double level = 0;
 		public double levelxp = 0;
-		public double maxlevelxp = 0;
+		public double maxlevelxp = 5.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)

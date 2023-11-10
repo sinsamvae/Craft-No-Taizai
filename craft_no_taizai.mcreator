@@ -1,5 +1,151 @@
 {
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "Levelup",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "levelup",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/LevelupProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/xplevelsystem"
+    },
+    {
+      "name": "Plusonexp",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plusonexp",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_no_taizai/models/item/plusonexp.json",
+          "src/main/java/net/mcreator/craftnotaizai/item/PlusonexpItem.java"
+        ]
+      },
+      "path": "~/xplevelsystem/level_item"
+    },
+    {
+      "name": "Xplevel",
+      "type": "procedure",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xplevel",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/XplevelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/xplevelsystem"
+    },
+    {
+      "name": "Maxlevelvar",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "maxlevelvar",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/MaxlevelvarProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/xplevelsystem"
+    },
+    {
+      "name": "Levelxpvar",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "levelxpvar",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/LevelxpvarProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/xplevelsystem"
+    },
+    {
+      "name": "PlusonexpItemInInventoryTick",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plusonexp_item_in_inventory_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/PlusonexpItemInInventoryTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/xplevelsystem/level_item"
+    },
+    {
+      "name": "EXPOVERLAY",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "expoverlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/client/screens/EXPOVERLAYOverlay.java"
+        ]
+      },
+      "path": "~/xplevelsystem"
+    }
+  ],
   "variable_elements": [
     {
       "name": "level",
@@ -10,23 +156,35 @@
     {
       "name": "levelxp",
       "type": "number",
-      "scope": "player_lifetime",
+      "scope": "player_persistent",
       "value": "0"
     },
     {
       "name": "maxlevelxp",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "5.0"
     }
   ],
   "sound_elements": [],
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "item.craft_no_taizai.plusonexp": "Plusonexp"
+    }
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "xplevelsystem",
+        "children": [
+          {
+            "name": "level_item",
+            "children": []
+          }
+        ]
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "craft_no_taizai",
