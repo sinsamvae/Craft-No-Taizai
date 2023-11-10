@@ -1,6 +1,25 @@
 {
   "mod_elements": [],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "level",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "levelxp",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "maxlevelxp",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    }
+  ],
   "sound_elements": [],
   "language_map": {
     "en_us": {}
